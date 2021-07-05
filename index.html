@@ -14,7 +14,8 @@
 <body>
     <div class="main">
         <h2>Subdomain Takeover PoC By Monish Basaniwal</h2>
-        <p>If you are seeing this message it means that this subdomain has been taken over due to a dangling
+        <p>This is a dynamically generated message. If you are seeing this message it means that this subdomain has been
+            taken over due to a dangling
             DNS
             record. </p>
         <p>If you are logged in to <b id="hostname"></b>, these are the Cookies that I can retrieve now:</p>
@@ -46,7 +47,7 @@
 
 <script>
     document.getElementById("cookiediv").innerHTML = document.cookie
-    document.getElementById("hostname").innerHTML = window.location.hostname
+    document.getElementById("hostname").innerHTML = window.location.hostname.split('.').slice(-2).join('.')
 
 </script>
 
